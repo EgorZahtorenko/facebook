@@ -1,10 +1,11 @@
 body{
+  position: fixed;
   margin: 0;
   width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #edeef0;
+  background-color: #e1e4eb;
   font-family: "Roboto", sans-serif;
 }
 header{
@@ -75,7 +76,7 @@ section{
   justify-content: space-between;
   flex-grow: 1;
   width: 70%;
-  background-color: yellow;
+
   margin: auto;
   & #content{
     display: flex;
@@ -97,22 +98,139 @@ section{
       flex-grow: 1;
     }
   }
-  & #friends{
+  & #friends {
     display: flex;
     flex-direction: column;
-    background-color: orangered;
     height: inherit;
     width: 25%;
     justify-content: space-between;
-    & #friendsAnswers{
+    margin-top: 10px;
+    & #friendsAnswers {
       width: 100%;
       height: 40%;
-      background-color: #ff39fa;
+      & ul {
+        padding: 0;
+      }
+      & ul > li {
+        list-style-type: none;
+        margin: 10px;
+      }
+      & ul div {
+        width: 100%;
+        height: 70px;
+        background-color: white;
+        box-shadow: 1px 2px 0 dimgray;
+        & figure {
+          position: fixed;
+          margin: 0;
+          & img {
+            border-radius: 50%;
+            position: fixed;
+            margin-top: 10px;
+            margin-left: 10px;
+          }
+          & figcaption {
+            margin-left: 75px;
+            margin-top: 15px;
+            font-size: 17px;
+          }
+          & span {
+            font-size: 15px;
+            color: gray;
+            margin-left: 75px;
+          }
+        }
+      }
+      & ul div:hover{
+        cursor: pointer;
+      }
     }
-    & #friendsOnline{
+    & #friendsOnline {
       width: 100%;
-      height: 55%;
-      background-color: #3ff3ff;
+      height: 65%;
+      margin-bottom: 40px;
+      & ul {
+        height: 517px;
+        padding: 0;
+        margin-right: 10px;
+        margin-left: 10px;
+        box-shadow: 1px 2px 0 dimgray;
+        background-color: white;
+      }
+      & ul > li {
+        list-style-type: none;
+        margin: 0;
+        height: 47px;
+      }
+      & ul div {
+        width: 100%;
+        height: 47px;
+        & figure {
+          position: fixed;
+          margin: 0;
+          & img {
+            border-radius: 50%;
+            position: fixed;
+            margin-top: 10px;
+            margin-left: 10px;
+            padding: 2px;
+          }
+          & figcaption {
+            margin-left: 55px;
+            margin-top: 14px;
+            font-size: 17px;
+            position: fixed;
+          }
+          & figcaption.online::after{
+            content: url(svg/circleOnline.svg);
+            position: fixed;
+            margin-left: 80px;
+            margin-top: -10px;
+            padding: 0;
+          }
+          & figcaption.onlineRed::after{
+            content: url(svg/circleOnlineOrangeRed.svg);
+            position: fixed;
+            margin-left: 80px;
+            margin-top: -10px;
+            padding: 0;
+          }
+          & figcaption.onlineOrange::after{
+            content: url(svg/circleOnlineOrange.svg);
+            position: fixed;
+            margin-left: 80px;
+            margin-top: -10px;
+            padding: 0;
+          }
+          & figcaption.back45min::after{
+              content: "back in 45 minutes";
+              color: gray;
+              font-style: italic;
+              position: fixed;
+              font-size: 15px;
+              margin-left: 10px;
+              padding: 0;
+            }
+          & figcaption.onPhone::after{
+            content: "on phone";
+            color: gray;
+            font-style: italic;
+            position: fixed;
+            font-size: 15px;
+            margin-left: 70px;
+            padding: 0;
+          }
+          & span {
+            font-size: 15px;
+            color: gray;
+            margin-left: 75px;
+          }
+        }
+      }
+      & ul div:hover{
+        background-color: #e2e2e2;
+        cursor: pointer;
     }
   }
+}
 }
