@@ -71,31 +71,217 @@ header{
     }
   }
 }
-section{
+section {
   display: flex;
   justify-content: space-between;
   flex-grow: 1;
   width: 70%;
-
   margin: auto;
-  & #content{
+  & #content {
     display: flex;
     flex-direction: column;
-    background-color: orange;
-    height: inherit;
     width: 65%;
-    & #add{
+    & #add {
       display: flex;
-      background-color: darkblue;
-      height: 120px;
+      height: 90px;
+      margin-top: 20px;
+      justify-content: space-between;
+      & #plus {
+        margin-top: 35px;
+        margin-left: 25px;
+      }
+      & #addContent {
+        width: 85%;
+        height: 90px;
+        background-color: white;
+        position: relative;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+        box-shadow: 3px 3px 0 rgba(192, 192, 192, .6);
+        & .content {
+          text-align: center;
+          width: 25%;
+          height: 90%;
+          display: flex;
+          border-right: 2px solid rgba(192, 192, 192, .5);
+          color: #000;
+          font-size: 14px;
+          align-items: center;
+          & > img {
+            margin-right: 30px;
+            margin-left: 20px;
+          }
+        }
+        & .content:last-child {
+          border-right: none;
+        }
+      }
+      & #addContent::before {
+        content: '';
+        position: absolute;
+        left: -20px;
+        top: 47px;
+        border: 10px solid transparent;
+        border-right: 10px solid white;
+      }
     }
     & #posts {
       display: flex;
       flex-direction: column;
       width: 100%;
       height: inherit;
-      background-color: antiquewhite;
-      flex-grow: 1;
+      margin-top: 30px;
+      justify-content: space-between;
+      & .FirstFriend {
+        display: flex;
+        justify-content: space-between;
+        & .autor {
+          width: 100px;
+          height: 100px;
+          display: flex;
+          flex-direction: column;
+          font-size: 14px;
+          align-items: center;
+          & > span {
+            color: grey;
+            margin-top: 4px;
+          }
+          & figure {
+            margin: 0;
+            & > img {
+              border-radius: 50%;
+              margin: 0 0 4px 10px;
+            }
+          }
+          & span.like > span {
+            vertical-align: 4px;
+            margin-left: 3px;
+          }
+        }
+        & .Friendsposts {
+          position: relative;
+          width: 85%;
+          height: 230px;
+          background-color: white;
+          margin-bottom: 30px;
+          box-shadow: 3px 3px 0 rgba(192, 192, 192, .6);
+          & .post{
+            width: 98%;
+            margin: auto;
+            & .lorem1{
+              font-size: 20px;
+              padding: 15px 15px 0 15px;
+            }
+            & h1{
+              font-weight: 500;
+              margin: 10px 10px 0 15px;
+            }
+            & #post1hr{
+              margin-top: 30px;
+            }
+            & #post3hr{
+              margin-top: 15px;
+            }
+            & #post3{
+              display: flex;
+              & div > video{
+                margin: 5px 5px 0 0;
+              }
+              & #lorem{
+                width: 420px;
+                height: inherit;
+                padding: 15px 15px 0 15px;
+                font-size: 20px;
+              }
+            }
+            & hr{
+              width: 99%;
+              height: 1px;
+              color: grey;
+            }
+            & #photos{
+              margin-top: 5px;
+            }
+            & .photos{
+              display: flex;
+              height: inherit;
+              justify-content: space-between;
+              align-items: center;
+              margin: 10px;
+              padding-left: 15px;
+              & div{
+                border-right: 2px solid rgba(192, 192, 192, .6);
+                padding-right: 18px;
+              }
+              & div:last-child{
+                border: none;
+              }
+            }
+            & .footer{
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+              padding-right: 5px;
+              & #FirstFriendComment{
+                height: 20px;
+                width: 70%;
+                border-radius: 100px;
+                border: 1px solid grey;
+              }
+              & #SecondFriendComment{
+                height: 20px;
+                width: 70%;
+                border-radius: 100px;
+                border: 1px solid grey;
+              }
+              & #ThirdFriendComment{
+                height: 20px;
+                width: 70%;
+                border-radius: 100px;
+                border: 1px solid grey;
+              }
+              & .CommentPhoto{
+                border-radius: 50%;
+              }
+              & > input{
+                background-image: url("svg/pencil.svg");
+                background-repeat: no-repeat;
+                background-size: 20px;
+                background-position: 480px;
+                outline: none;
+              }
+              & .buttons{
+                display: flex;
+                & .likes{
+                  border-right: 2px solid rgba(192, 192, 192, .6);
+                  padding-right: 10px;
+                  margin-top: 3px;
+                }
+                & .repost{
+                  border-right: 2px solid rgba(192, 192, 192, .6);
+                  padding-right: 10px;
+                  margin-top: 2px;
+                }
+                & .earth{
+                  padding-right: 10px;
+                  padding-left: 10px;
+                  margin-top: 8px;
+                }
+              }
+            }
+          }
+        }
+        & .Friendsposts::before {
+          content: '';
+          position: absolute;
+          left: -20px;
+          top: 20px;
+          border: 10px solid transparent;
+          border-right: 10px solid white;
+        }
+      }
     }
   }
   & #friends {
@@ -104,7 +290,7 @@ section{
     height: inherit;
     width: 25%;
     justify-content: space-between;
-    margin-top: 10px;
+    margin-top: 5px;
     & #friendsAnswers {
       width: 100%;
       height: 40%;
@@ -119,7 +305,7 @@ section{
         width: 100%;
         height: 70px;
         background-color: white;
-        box-shadow: 1px 2px 0 dimgray;
+        box-shadow: 3px 3px 0 rgba(192, 192, 192, .6);
         & figure {
           position: fixed;
           margin: 0;
@@ -141,20 +327,21 @@ section{
           }
         }
       }
-      & ul div:hover{
+      & ul div:hover {
         cursor: pointer;
       }
     }
     & #friendsOnline {
       width: 100%;
       height: 65%;
-      margin-bottom: 40px;
+      margin-bottom: 25px;
+      margin-top: 10px;
       & ul {
         height: 517px;
         padding: 0;
         margin-right: 10px;
         margin-left: 10px;
-        box-shadow: 1px 2px 0 dimgray;
+        box-shadow: 3px 3px 0 rgba(192, 192, 192, .6);
         background-color: white;
       }
       & ul > li {
@@ -181,37 +368,37 @@ section{
             font-size: 17px;
             position: fixed;
           }
-          & figcaption.online::after{
+          & figcaption.online::after {
             content: url(svg/circleOnline.svg);
             position: fixed;
             margin-left: 80px;
             margin-top: -10px;
             padding: 0;
           }
-          & figcaption.onlineRed::after{
+          & figcaption.onlineRed::after {
             content: url(svg/circleOnlineOrangeRed.svg);
             position: fixed;
             margin-left: 80px;
             margin-top: -10px;
             padding: 0;
           }
-          & figcaption.onlineOrange::after{
+          & figcaption.onlineOrange::after {
             content: url(svg/circleOnlineOrange.svg);
             position: fixed;
             margin-left: 80px;
             margin-top: -10px;
             padding: 0;
           }
-          & figcaption.back45min::after{
-              content: "back in 45 minutes";
-              color: gray;
-              font-style: italic;
-              position: fixed;
-              font-size: 15px;
-              margin-left: 10px;
-              padding: 0;
-            }
-          & figcaption.onPhone::after{
+          & figcaption.back45min::after {
+            content: "back in 45 minutes";
+            color: gray;
+            font-style: italic;
+            position: fixed;
+            font-size: 15px;
+            margin-left: 10px;
+            padding: 0;
+          }
+          & figcaption.onPhone::after {
             content: "on phone";
             color: gray;
             font-style: italic;
@@ -227,10 +414,10 @@ section{
           }
         }
       }
-      & ul div:hover{
-        background-color: #e2e2e2;
+      & ul div:hover {
+        background-color: #bab8ba;
         cursor: pointer;
+      }
     }
   }
-}
 }

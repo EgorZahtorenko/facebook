@@ -12,14 +12,12 @@
 <body>
 
 <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="50" cy="40" r="20" fill=url("#tick")></circle>
-    <line x1="50" y1="50" x2="58" y2="30" stroke="gray" stroke-width="2px"></line>
-    <line x1="50" y1="50" x2="42" y2="30" stroke="gray" stroke-width="2px"></line>
-    <linearGradient id="tick" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%" stop-color="#4e69a2" stop-opacity="0.9"></stop>
-        <stop offset="50%" stop-color="#3b5998"></stop>
-    </linearGradient>
+    <path d="M 60 60 h 20 v 10 h -30 a 10 10 0 1 1 0 -30 h 30 v 10 h -30 a 1 1 0 1 0 0 10 h 10 z" stroke="black" fill="black"></path>
+    <polygon points="80,35 90,45 80,55" fill="black"></polygon>
 </svg>
 
 </body>
 </html>
+
+<path d="M 25 65 v 20 h 35 v -20 z" transform="rotate(45)"></path>
+
